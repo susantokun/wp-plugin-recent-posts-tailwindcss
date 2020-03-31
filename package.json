@@ -1,0 +1,33 @@
+{
+  "name": "wp-plugin-recent-posts-tailwindcss",
+  "version": "1.0.0",
+  "description": "Recent Posts Custom with Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/susantokun/wp-plugin-recent-posts-tailwindcss.git"
+  },
+  "keywords": [
+    "wp",
+    "recent",
+    "posts",
+    "wp",
+    "recent",
+    "posts",
+    "custom",
+    "recent",
+    "posts",
+    "custom",
+    "wordpress",
+    "tailwindcss"
+  ],
+  "author": "susantokun <admin@susantokun.com> (http://www.susantokun.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/susantokun/wp-plugin-recent-posts-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/susantokun/wp-plugin-recent-posts-tailwindcss#readme"
+}
