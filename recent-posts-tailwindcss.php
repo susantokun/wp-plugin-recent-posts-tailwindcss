@@ -73,13 +73,16 @@ class WP_Widget_Recent_Posts_Custom extends WP_Widget
         if (get_queried_object_id() === $recent_post->ID) {
             $aria_current = ' aria-current="page"';
         } ?>
-        <div class="h-px mx-auto bg-gray-400 w-full opacity-75 my-2"></div>
-				<div class="w-full text-sm text-content truncate">
-					<a class="hover:text-blue" href="<?php the_permalink($recent_post->ID); ?>"<?php echo $aria_current; ?>><?php echo $title; ?></a>
+				<div class="w-full text-sm truncate">
+					<a class="font-medium hover:text-blue-light" title="<?php echo $title; ?>" href="<?php the_permalink($recent_post->ID); ?>"<?php echo $aria_current; ?>><?php echo $title; ?></a>
 					<?php if ($show_date) : ?>
-						<div class="w-full text-xs text-info"><?php echo get_the_date('', $recent_post->ID); ?></div>
+						<div class="w-full text-xs flex items-center">
+              <svg class="h-3 w-auto inline-block pr-1" aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path></svg>
+              <?php echo get_the_date('', $recent_post->ID); ?>
+            </div>
 					<?php endif; ?>
 				</div>
+        <div class="h-px mx-auto bg-body w-full opacity-75 my-2"></div>
 			<?php endforeach; ?>
 		<?php
         echo $args['after_widget'];
